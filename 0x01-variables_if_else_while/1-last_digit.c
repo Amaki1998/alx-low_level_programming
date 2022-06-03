@@ -1,24 +1,23 @@
 #include <stdio.h>
-#include <stdlib.h>
-
+#include <time.h>
 int main(void)
 {
-int num;
+int n;
+srand(time(0));
+n = rand() - RAND_MAX / 2;
 int last_digit;
-printf("enter the string: ");
-scanf("%d ", &num);
-last_digit = num % 10;
+last_digit = n % 10;
 if (last_digit >  5)
 {
-printf("Last digit of %d is %d and is greater than 5\n", num, last_digit);
+printf("Last digit of %d is %d and is greater than 5\n", n, last_digit);
 }
 else if (last_digit == 0)
 {
-printf("Last digit of %d is %d and is and is 0\n", num, last_digit);
+printf("Last digit of %d is %d and is and is 0\n", n, last_digit);
 }
 else if (last_digit < 6 && last_digit != 0)
 {
-printf("Last digit of %d is %d and is and is and is less than 6 and not 0\n", num, last_digit);
+printf("Last digit of %d is %d and is and is and is less than 6 and not 0\n", n, last_digit);
 }
-return (SUCCESS);
+return (0);
 }
