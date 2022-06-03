@@ -1,12 +1,20 @@
 #include <stdlib.h>
+#include <stdlib.h>
+/**
+ * main - core function
+ * Return: exit the program
+ */
 int main(void)
 {
-char l = 97;
-while (l <= 122)
-{
-putchar(l);
-++l;
+	char small = 97;
+
+	while (small <= 122)
+	{
+	putchar(small);
+	++small;
+	}
+	putchar('\n');
+
+	return (0);
 }
-putchar(10);
-return (0);
-}
+
