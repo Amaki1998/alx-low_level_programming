@@ -9,18 +9,18 @@ scanf("%d", &n);
 if (n > 0)
 {
 printf("%d ", n);
-printf("is positive\n", n);
+printf("is positive\n");
 }
 else if (n < 0)
 {
 printf("%d ", n);
-printf("is negative\n", n);
+printf("is negative\n");
 }
 else
 {
 printf("%d ", n);
-printf("is zero\n", n);
+printf("is zero\n");
 }
-return (0);
+return (SUCCESS);
 }
 
