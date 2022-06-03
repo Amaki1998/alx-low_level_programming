@@ -18,6 +18,6 @@ else
 {
 printf("%d is zero\n", n);
 }
-return (SUCCESS);
+return (0);
 }
 
