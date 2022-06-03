@@ -2,7 +2,7 @@
 /**
  * main - core function
  *
- * Return: eexit program
+ * Return: exit program
  */
 int main(void)
 {
