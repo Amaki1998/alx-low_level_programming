@@ -1,17 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/*
-* main - it is for positive and negative
-*
-* more headers goes there
-* betty style doc for function main goes there
-* return: to exit
-*/
-
+/**
+ * main - assigns a random number to int n everytime it executes, and prints it
+ * Return: 0 to exit
+ */
 int main(void)
 {
-
 int n;
 
 srand(time(0));
