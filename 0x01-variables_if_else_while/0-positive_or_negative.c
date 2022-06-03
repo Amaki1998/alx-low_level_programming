@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 /*
-* main - it is main
+* main - it is for positive and negative
+*
 * more headers goes there
 * betty style doc for function main goes there
 * return: to exit
