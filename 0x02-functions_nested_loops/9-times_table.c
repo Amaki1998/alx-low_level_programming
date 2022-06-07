@@ -27,7 +27,6 @@ if (y < 9)
 _putchar(44);
 }
 y = 0;
-x++;
-_putchar(10);
+_putchar('\n');
 }
 }
