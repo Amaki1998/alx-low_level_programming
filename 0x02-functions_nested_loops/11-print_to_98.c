@@ -15,13 +15,11 @@ void print_to_98(int n)
 		{
 			if (n != last)
 			{
-				_putchar(n + '0');
-				_putchar(',');
-				_putchar(' ');
+				printf("%d%s", n, ", ");
 			}
 			else
 			{
-				_putchar(n + '0');
+				printf("%d", n);
 			}
 			n--;
 		}
@@ -32,16 +30,14 @@ void print_to_98(int n)
 		{
 			if (n != last)
 			{
-				_putchar(n + '0');
-				_putchar(',');
-				_putchar(' ');
+				printf("%d%s", n, ", ");
 			}
 			else
 			{
-				_putchar(n + '0');
+				printf("%d", n);
 			}
 			n++;
 		}
 	}
-	_putchar('\n');
+	putchar('\n');
 }
