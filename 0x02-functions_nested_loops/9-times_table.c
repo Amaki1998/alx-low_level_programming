@@ -16,15 +16,15 @@ for (y = 0; y < 10; y++)
 {
 i = y * x;
 a = i % 10;
-b = (i - b) / 10;
+b = (i - a) / 10;
 if (y > 0)
 {
 _putchar(' ');
 (b <= 0) ? _putchar(' ') : _putchar(b + '0');
 }
-_putchar(b + '0');
+_putchar(a + '0');
 if (y < 9)
-_putchar(44);
+_putchar(',');
 }
 y = 0;
 _putchar('\n');
