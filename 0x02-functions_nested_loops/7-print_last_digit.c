@@ -9,5 +9,12 @@
 int print_last_digit(int x)
 {
 int last_dig = x % 10;
+if (last_dig > 0)
+{
 return (last_dig);
+}
+else
+{
+return (-lasst_dig);
+}
 }
