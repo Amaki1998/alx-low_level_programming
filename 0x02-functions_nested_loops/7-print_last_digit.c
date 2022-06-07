@@ -18,6 +18,6 @@ return (last_dig);
 else
 {
 _putchar(-last_dig + '0');
-return (-lasst_dig);
+return (-last_dig);
 }
 }
