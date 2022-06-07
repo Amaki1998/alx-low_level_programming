@@ -19,8 +19,8 @@ a = i % 10;
 b = (i - b) / 10;
 if (y > 0)
 {
-_putchar(',');
-(b <= 0) ? _putchar(',') : _putchar(b + '0');
+_putchar(' ');
+(b <= 0) ? _putchar(' ') : _putchar(b + '0');
 }
 _putchar(b + '0');
 if (y < 9)
