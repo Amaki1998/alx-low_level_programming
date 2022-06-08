@@ -7,7 +7,7 @@
 int main(void)
 {
 	int i = 1;
-	long int  n1 = 0;
+	long int n1 = 0;
 	long int n2 = 1;
 	long int sp = 0;
 	long int se = 0;
