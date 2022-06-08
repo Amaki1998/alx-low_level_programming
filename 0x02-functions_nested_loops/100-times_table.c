@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 /**
  * print_times_table - function print n timestable
@@ -41,7 +40,7 @@ void print_times_table(int n)
 				a = 0;
 			}
 			y++;
-			_putchar('\n');
+			putchar('\n');
 			a = 1;
 		}
 	}
