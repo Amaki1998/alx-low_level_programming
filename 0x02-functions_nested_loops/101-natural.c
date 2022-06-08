@@ -17,7 +17,7 @@ int main(void)
 		else
 		{
 		}
-		x++
+		x++;
 	}
 	printf("%d\n", y);
 
