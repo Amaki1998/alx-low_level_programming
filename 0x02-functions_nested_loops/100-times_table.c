@@ -5,8 +5,8 @@
  */
 void print_times_table(int n)
 {
-	int x, y, z;
-	int a = 1;
+	int x, y, z, a = 1;
+
 	if (n >= 0 && n <= 15)
 	{
 		y = 0;
@@ -24,17 +24,9 @@ void print_times_table(int n)
 				{
 					printf(",  %d", z);
 				}
-				else if (a == 0 && z < 1000)
-				{
-					printf(", %d", z);
-				}
-				else if (a == 0 && z >= 1000)
-				{
-					printf(",%d", z);
-				}
 				else
 				{
-					printf("%d", z);
+					printf("  %d", z);
 				}
 				x++;
 				a = 0;
