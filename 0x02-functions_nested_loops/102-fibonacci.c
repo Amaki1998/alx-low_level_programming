@@ -15,8 +15,8 @@ int main(void)
 		printf(", %ld", a);
 		y = z;
 		z = a;
+		x++;
 	}
-	x++;
 	putchar('\n');
 
 	return (0);
