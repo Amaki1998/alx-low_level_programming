@@ -20,9 +20,9 @@ void print_times_table(int n)
 				{
 					printf(",   %d", z);
 				}
-				else if (a == 0 && x < 100)
+				else if (a == 0 && z < 100)
 				{
-					printf(", %d", z);
+					printf(",  %d", z);
 				}
 				else if (a == 0 && z < 1000)
 				{
