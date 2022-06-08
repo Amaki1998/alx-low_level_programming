@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	int x = 1, y = 1, z = 1, a;
+	long int x = 1, y = 1, z = 1, a;
 
 	printf("%d", y);
 	while (x < 50)
