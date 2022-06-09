@@ -5,7 +5,7 @@
  */
 int main(void)
 {
-	long int n, div = 2, ans = 0, maxFact;
+	long long int n, div = 2, ans = 0, maxFact;
 
 	n = 612852475143;
 	while (n != 0)
