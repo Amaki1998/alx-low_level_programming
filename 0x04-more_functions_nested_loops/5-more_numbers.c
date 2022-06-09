@@ -10,7 +10,7 @@ void more_numbers(void)
 
 	for (b = 0; b <= 9; b++)
 	{
-		for (a = 48; a < 62; a++)
+		for (a = 48; a <= 62; a++)
 		{
 			if (a > 57)
 			{
