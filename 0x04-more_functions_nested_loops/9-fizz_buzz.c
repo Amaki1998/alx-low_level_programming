@@ -16,7 +16,7 @@ int main(void)
 		else if (i % 3 == 0)
 			printf("Fizz ");
 		else
-			printf("%d ", n);
+			printf("%d ", i);
 	}
 	printf("Buzz\n");
 	return (0);

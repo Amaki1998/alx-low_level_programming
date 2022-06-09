@@ -18,7 +18,7 @@ int main(void)
 			n = n / div;
 			if (n == 1)
 			{
-				printf("%d", maxFact);
+				printf("%ld", maxFact);
 				ans = 1;
 				break;
 			}
