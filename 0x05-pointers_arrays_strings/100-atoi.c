@@ -27,6 +27,6 @@ int _atoi(char *s)
 			break;
 		x++;
 	}
-	result *= y;
+	z *= y;
 	return (z);
 }
