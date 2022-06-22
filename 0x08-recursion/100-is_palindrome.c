@@ -8,7 +8,7 @@ int is_palindrome(char *s)
 {
 	int x;
 
-	x = 0;
+	x = 1;
 
 	if (*s == x)
 		return (0);
