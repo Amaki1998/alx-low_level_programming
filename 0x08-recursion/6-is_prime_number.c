@@ -10,16 +10,10 @@ int is_prime_number(int n)
 
 	x = n / 2;
 	if (x == 1)
-	{
 		return (1);
-	}
 	else if (n % x == 0)
-	{
 		return (0);
-	}
 	else
-	{
 		x = x - 1;
 		is_prime_number(n);
-	}
 }
