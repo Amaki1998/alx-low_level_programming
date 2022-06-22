@@ -14,6 +14,8 @@ int is_prime_number(int n)
 	else if (n % x == 0)
 		return (0);
 	else
+	{
 		x = x - 1;
 		is_prime_number(n);
+	}
 }
