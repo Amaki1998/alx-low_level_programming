@@ -7,7 +7,13 @@
  */
 int main(int argc, char *argv[])
 {
+	int i = 0;
+
+	while (i < argc)
+	{
+		i++;
+		(*argv)++;
+	}
 	printf("%d\n", argc);
-	(void)argc;
 	return (0);
 }
