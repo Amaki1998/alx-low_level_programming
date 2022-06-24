@@ -11,8 +11,6 @@ int main(int argc, char *argv[])
 {
 	int i = 1, j = 0, k = 1;
 
-	if (argc < 1)
-		return (0);
 	while (i < argc)
 	{
 		while (argv[j][j] != 0)
