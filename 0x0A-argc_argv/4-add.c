@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h>
 #include <stdlib.h>
 /**
  * main - function that adds positive numbers
@@ -8,20 +9,24 @@
  */
 int main(int argc, char *argv[])
 {
-	int i = 1, j = 0;
+	int i = 1, j = 0, k = 1;
 
 	if (argc < 1)
 		return (0);
 	while (i < argc)
 	{
-		if (!atoi(argv[i]))
+		while (argv[j][j] != 0)
 		{
-			printf("%s\n", "Error");
-			return (1);
+			if (!isdigit(argv[i][j]))
+			{
+				printf("%s\n", "Error");
+				return (1);
+			}
+			j++;
 		}
-		j = j + atoi(argv[i]);
+		k = k + atoi(argv[i]);
 		i++;
 	}
-	printf("%d\n", j);
+	printf("%d\n", k);
 	return (0);
 }
