@@ -10,38 +10,30 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, j = 0, k = 0;
-	int a[5] = {25, 10, 5, 2, 1};
+	int i = 0, j;
 
-	if (argc != 2)
+	if (argc < 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	i = atoi(argv[1]);
-	if (i < 0)
+
+	j = atoi(argv[1]);
+
+	while (j > 0)
 	{
-		printf("0\n");
+		if (j - 25 >= 0)
+			j -= 25;
+		else if (j - 10 >= 0)
+			j -= 10;
+		else if (j - 5 >= 0)
+			j -= 5;
+		else if (j - 2 >= 0)
+			j -= 2;
+		else if (j - 1 >= 0)
+			j -= 1;
+		i++;
 	}
-	else
-	{
-		while (j < 5)
-		{
-			if (i >= a[j])
-			{
-				i = i - a[i];
-				k = k + 1;
-				if (i >= a[i])
-				{
-					j--;
-				}
-				else if (i == 0)
-				{
-					break;
-				}
-			}
-		}
-		printf("%d\n", k);
-		return (0);
-	}
+	printf("%d\n", i);
+	return (0);
 }
