@@ -1,5 +1,4 @@
 #!/bin/bash
-gcc -c *.c
-ar -rc libmy.a *.o
 gcc -c main.h -o main.o
-gcc -o main main.o -L. libmy.a
+ar -rcs libmy.a main.h
+ranlib libmy.a
