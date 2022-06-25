@@ -1,4 +1,25 @@
 #!/bin/bash
-gcc -c -Wall -Werror -Wextra *.c
-ar -rc libmy.a *.o
-ranlib libmy.a
+gcc - Wall - pedantic - Werror - Wextra - std=gnu89 -c * .c
+
+ar - rc libmy.a *.o
+
+ar -t libmy.a
+
+ranlib libmy.o
+
+cat > main.c
+#include "main.h"
+/**
+ * main - Entry point
+ * Return: 0.
+ */
+int main(void)
+{
+	_puts("\"At the end of the day, my goal was to be the best hacker\
+	"\n\t- Kevin Mitnick");
+	return (0);
+}
+
+cc -std=gnu89 main.c -L. -lmy -o quote
+To test main.c :
+./quote
