@@ -7,7 +7,7 @@
  */
 char *create_array(unsigned int size, char c)
 {
-	char *ar = 0;
+	char *ar = NULL;
 	unsigned int x = 0;
 
 	if (size == 0)
@@ -15,7 +15,7 @@ char *create_array(unsigned int size, char c)
 	if (size != 0)
 	{
 		ar = (char *)malloc(size * sizeof(char));
-		if (ar != 0)
+		if (ar != NULL)
 		{
 			while (x < size)
 			{
