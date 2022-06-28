@@ -9,8 +9,8 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *new = 0;
-	unsigned int x;
+	char *new = NULL;
+	unsigned int x = 0;
 	int i = 0;
 	int j = 0;
 	int count;
