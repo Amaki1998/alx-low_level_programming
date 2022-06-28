@@ -10,7 +10,7 @@ char **strtow(char *str)
 	char **x;
 	int i = 0, j = 0, k = 0;
 
-	if (str == '\0')
+	if (str == NULL)
 		return (NULL);
 
 	while (str[i] != '\0')
@@ -20,7 +20,7 @@ char **strtow(char *str)
 		i++;
 	}
 	x = malloc(sizeof(char) * k);
-	if (x == '\0')
+	if (x == NULL)
 		return (NULL);
 	i = 0;
 	while (str[i] != '\0')
