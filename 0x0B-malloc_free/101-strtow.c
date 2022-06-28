@@ -10,20 +10,20 @@ char **strtow(char *str)
 	char **x;
 	int i = 0, j = 0, k = 0;
 
-	if (str == "")
-		return ("");
+	if (str == NULL)
+		return (NULL);
 
-	while (str[i] != "")
+	while (str[i] != NULL)
 	{
 		if (str[i] != ' ')
 			k++;
 		i++;
 	}
 	x = malloc(sizeof(char) * k);
-	if (x == "")
+	if (x == NULL)
 		return (NULL);
 	i = 0;
-	while (str[i] != "")
+	while (str[i] != NULL)
 	{
 		if (str[i] != ' ')
 		{
