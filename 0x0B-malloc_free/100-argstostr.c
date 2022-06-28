@@ -32,7 +32,7 @@ char *argstostr(int ac, char **av)
 	j = 0;
 	while (j < ac)
 	{
-		for (k = 0; av[j][k] != '\0'; j++)
+		for (k = 0; av[j][k] != '\0'; k++)
 		{
 			x[y++] = av[j][k];
 		}
