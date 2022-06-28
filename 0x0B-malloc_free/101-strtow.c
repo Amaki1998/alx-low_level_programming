@@ -7,33 +7,44 @@
 */
 char **strtow(char *str)
 {
-	char **x;
-	int i = 0, j = 0, k = 0;
+	char **r, *ptr = str;
+	int j = 0, i = 0;
 
-	if (str == NULL)
-		return (NULL);
-
-	while (str[i] != '\0')
+	if (str == 0 || *str == 0)
+		return (0);
+	while (*ptr)
 	{
-		if (str[i] != ' ')
-			k++;
-		i++;
-	}
-	x = malloc(sizeof(char) * k);
-	if (x == NULL)
-		return (NULL);
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] != ' ')
-		{
-			*x[j] = str[i];
+		if (!(*ptr == ' ') && (*(ptr + 1) == ' ' || *(ptr + 1) == 0))
 			j++;
+		ptr++;
+	}
+	if (j == 0)
+		return (NULL);
+	r = malloc((j + 1) * sizeof(char *));
+	if (r == 0)
+		return (0);
+	while (*str)
+	{
+		if (*str != ' ')
+		{
+			for (ptr = str, j = 0; *ptr != ' ' && *ptr != 0;)
+				j++, ptr++;
+			r[i] = malloc(j + 1);
+			if (r[i] == 0)
+			{
+				while (i >= 0)
+					free(r[--i]);
+				free(r);
+				return (0);
+			}
+			ptr = r[i++];
+			while (*str != ' ' && *str != 0)
+				*ptr++ = *str++;
+			*ptr = 0;
 		}
 		else
-		{
-		}
-		i++;
+			str++;
 	}
-	return (x);
+	r[i] = 0;
+	return (r);
 }
