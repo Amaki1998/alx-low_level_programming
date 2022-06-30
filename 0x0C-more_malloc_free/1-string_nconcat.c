@@ -32,7 +32,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		ar[c1] = s1[c1];
 		c1++;
 	}
-	for (c2 = 0; c1 < y; c2++)
+	for (c2 = 0; c2 < y; c2++)
 	{
 		ar[c1] = s2[c2];
 		c1++;
