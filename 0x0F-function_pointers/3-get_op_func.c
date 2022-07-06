@@ -14,12 +14,13 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-	int x;
+	int x = 0;
 
-	for (x = 0; x < 5; x++)
+	while (ops[x].op != NULL)
 	{
-		if (strcmp(s, ops[x].op) == 0)
-			return (*(ops[x]).f);
+		if (*s == *(ops[x].op) && s[1] == 0)
+			return (ops[x].f);
 	}
-	return (NULL);
+	printf("Error\n");
+	exit(99);
 }
