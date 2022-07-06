@@ -20,8 +20,8 @@ int (*get_op_func(char *s))(int, int)
 
 	for (x = 0; x < 5; x++)
 	{
-		if (ops[x].op[0] == s[0])
-			return (ops[x].f);
+		if (strcmp(s, ops[x].op) == 0)
+			return (*(ops[x]).f);
 	}
 	return (NULL);
 }
