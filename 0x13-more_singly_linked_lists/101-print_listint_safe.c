@@ -8,27 +8,21 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	int length = 0, x = 0;
-	const listint_t *tmp[100];
+size_t a;
+listint_t *b = (listint_t *)head;
 
-	if (!head)
-		exit(98);
-
-	while (head)
-	{
-		while (x < length)
-		{
-			if (tmp[i] == head)
-			{
-				printf("-> [%p] %d\n", (void *)head, head->n);
-				return (length);
-			}
-			x++;
-		}
-		printf("[%p] %d\n", (void *)head, head->n);
-		tmp[length] = head;
-		length++;
-		head = head->next;
-	}
-	return (length);
+a = 0;
+while (b && b > b->next)
+{
+printf("[%p] %d\n", (void *)b, b->n);
+b = b->next;
+a++;
+}
+if (b)
+{
+printf("[%p] %d\n", (void *)b, b->n);
+printf("-> [%p] %d\n", (void *)b->next, b->next->n);
+a++;
+}
+return (a);
 }
