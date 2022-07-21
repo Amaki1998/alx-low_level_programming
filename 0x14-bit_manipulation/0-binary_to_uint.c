@@ -11,7 +11,6 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int x = 0;
 
 	while (b[x] != '\0')
-	for (decimal = 0, i = 0; b[i] != '\0'; i++)
 	{
 		if (b[x] == '0')
 			decimal <<= 1;
