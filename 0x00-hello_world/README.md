@@ -1,1 +1,2 @@
-c readme
+##0x00. C - Hello, World
+**The beginnings of C**

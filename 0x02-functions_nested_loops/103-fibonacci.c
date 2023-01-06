@@ -1,26 +1,33 @@
+#include "holberton.h"
 #include <stdio.h>
+
 /**
- * main - main function
+ * main - calls fibonacci
  *
- * Return: end program
+ * Return: always 0
  */
 int main(void)
 {
-	int i = 1;
-	long int n1 = 0;
-	long int n2 = 1;
-	long int sp = 0;
-	long int se = 0;
-	long int max = 4000000;
-
-	while (n1 < max && n2 < max)
-	{
-		sp = n1 + n2;
-		se += (((sp % 2) == 0) ? sp : 0);
-		n1 = n2;
-		n2 = sp;
-		i++;
-	}
-	printf("%ld\n", se);
+	fibonacci_sum();
 	return (0);
+}
+
+/**
+ * fibonacci_sum - print first 100 fibonacci numbers
+ *
+ * Return: void
+ */
+void fibonacci_sum(void)
+{
+	unsigned long a, b, c, s;
+
+	for (s = 0, a = 1, b = 2; a < 4000000;)
+	{
+		if (!(a % 2))
+			s += a;
+		c = a;
+		a = b;
+		b += c;
+	}
+	printf("%lu\n", s);
 }

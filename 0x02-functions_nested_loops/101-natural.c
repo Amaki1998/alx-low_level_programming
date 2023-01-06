@@ -1,25 +1,30 @@
+#include "holberton.h"
 #include <stdio.h>
+
 /**
- * main - main function lists natural numbers
+ * main - calls natural
  *
- * Return: exit program
+ * Return: always 0
  */
 int main(void)
 {
-	int x, y = 0;
-
-	while (x < 1024)
-	{
-		if ((x % 3) == 0 || (x % 5) == 0)
-		{
-			y = y + x;
-		}
-		else
-		{
-		}
-		x++;
-	}
-	printf("%d\n", y);
-
+	natural();
 	return (0);
+}
+
+/**
+ * natural - prints sum of all multiples of 3 & 5 less thn 1024
+ *
+ * Return: void
+ */
+void natural(void)
+{
+	int i, s;
+
+	for (i = 0, s = 0; i < 1024; i++)
+	{
+		if (!(i % 3) || !(i % 5))
+			s += i;
+	}
+	printf("%d\n", s);
 }

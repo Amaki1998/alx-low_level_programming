@@ -1,21 +1,20 @@
 #include <stdio.h>
+
 /**
- * main - core function
- * Return: exit the program
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	char small = 97;
+	char c;
 
-	while (small <= 122)
+	for (c = 'a'; c <= 'z'; c++)
 	{
-		if (small != 101 && small != 113)
-		{
-			putchar(small);
-		}
-		++small;
+		if (c != 'q' && c != 'e')
+			putchar(c);
 	}
 	putchar('\n');
-
 	return (0);
 }
+

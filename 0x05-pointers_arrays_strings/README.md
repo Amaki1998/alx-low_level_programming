@@ -1,1 +1,2 @@
-0x05. C - Pointers, arrays and strings
+## 0x05. C - More pointers, arrays and strings
+**A little more technical now.**

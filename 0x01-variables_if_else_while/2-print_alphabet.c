@@ -1,19 +1,18 @@
 #include <stdio.h>
-#include <stdlib.h>
-/**
- * main - core function
- * Return: exit the program
- */
 
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-char small = 97;
-while (small <= 122)
-{
-putchar(small);
-++small;
-}
-putchar('\n');
-return (0);
-}
+	char c;
 
+	for (c = 'a'; c <= 'z'; c++)
+	{
+		putchar(c + 1);
+	}
+	putchar('\n');
+	return (0);
+}

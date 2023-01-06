@@ -1,49 +1,50 @@
 #include <stdio.h>
+
 /**
- * main - main function
+ * main - Entry point
  *
- * Return: end program
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int a = 0, b = 0, c = 0, d = 0;
-	int coma = 1;
+	int a, b, c, d;
 
-	while (a <= 9)
+	a = 0;
+	b = 0;
+	c = 0;
+	d = 0;
+	while (a * 10 + b < 100)
 	{
-		while (b <= 9)
+		if (c * 10 + d > a * 10 + b)
 		{
-			while (c <= 9)
+			putchar(a + '0');
+			putchar(b + '0');
+			putchar(' ');
+			putchar(c + '0');
+			putchar(d + '0');
+			if (a * 10 + b < 98)
 			{
-				while (d <= 9)
-				{
-					if ((c * 10) + d > (a * 10) + b)
-					{
-					if (coma == 0)
-					{
-						putchar(',');
-						putchar(32);
-					}
-						putchar(a + '0');
-						putchar(b + '0');
-						putchar(32);
-						putchar(c + '0');
-						putchar(d + '0');
-						coma = 0;
-					}
-					++d;
-				}
-				++c;
-				d = 0;
+				putchar(',');
+				putchar(' ');
 			}
-			++b;
+		}
+		d++;
+		if (d > 9)
+		{
+			c++;
+			d = 0;
+		}
+		if (c > 9)
+		{
+			b++;
 			c = 0;
 		}
-		++a;
-		b = 0;
+		if (b > 9)
+		{
+			a++;
+			b = 0;
+		}
 	}
-
 	putchar('\n');
-
 	return (0);
 }

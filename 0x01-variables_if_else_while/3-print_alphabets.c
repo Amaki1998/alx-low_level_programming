@@ -1,26 +1,21 @@
 #include <stdio.h>
+
 /**
- * main - core function
- * Return: exit the program
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
+int main(void) {
+	char c;
 
-int main(void)
-{
-	char small = 97;
-	char capital = 65;
-
-	while (small <= 122)
+	for (c = 'a'; c <= 'z'; c++)
 	{
-		putchar(small);
-		++small;
+		putchar(c);
 	}
-	while (capital <= 90)
+	for (c = 'A'; c <= 'Z'; c++)
 	{
-		putchar(capital);
-		++capital;
+		putchar(c);
 	}
-
 	putchar('\n');
-
 	return (0);
 }

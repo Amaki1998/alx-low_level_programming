@@ -1,23 +1,26 @@
-#include "main.h"
-/**
- * print_last_digit - print the last digit
- *
- * @x: variable
- *
- * Return: return the last digit
- */
-int print_last_digit(int x)
-{
-int last_dig = x % 10;
+#include "holberton.h"
 
-if (last_dig > 0)
+/**
+ * print_last_digit - prints the last digit of the integer passed
+ * @n: the integer whose last digit to print
+ *
+ * Return: positive integer value of the last digit
+ */
+int print_last_digit(int n)
 {
-_putchar(last_dig + '0');
-return (last_dig);
+	int d = _abs(n % 10);
+
+	_putchar(d + '0');
+	return (d);
 }
-else
+
+/**
+ * _abs - returns the absolute value of integer
+ * @n: the integer to value absolutely
+ *
+ * Return: a positive integer or zero
+ */
+int _abs(int n)
 {
-_putchar(-last_dig + '0');
-return (-last_dig);
-}
+	return (n > 0 ? n : -n);
 }

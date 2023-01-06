@@ -1,18 +1,28 @@
-#include "main.h"
+#include "holberton.h"
+
 /**
- * print_alphabet_x10 - prints 10 time small letter alphabet
+ * print_alphabet_x10 - prints 10x characters from a to z
+ *
+ * Return: Always void.
  */
 void print_alphabet_x10(void)
 {
-char ch;
-int n = 10;
-while (n >= 1)
-{
-for (ch = 'a'; ch <= 'z'; ch++)
-{
-_putchar(ch);
+	int i;
+
+	for (i = 0; i < 10; i++)
+		print_alphabet();
 }
-n--;
-_putchar('\n');
-}
+
+/**
+ * print_alphabet - prints characters from a to z
+ *
+ * Return: Always void.
+ */
+void print_alphabet(void)
+{
+	char c;
+
+	for (c = 'a'; c <= 'z'; c++)
+		_putchar(c);
+	_putchar('\n');
 }

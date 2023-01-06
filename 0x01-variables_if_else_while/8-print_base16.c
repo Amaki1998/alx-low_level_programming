@@ -1,26 +1,22 @@
 #include <stdio.h>
+
 /**
- * main - core function
+ * main - Entry point
  *
- * Return: exit program
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int x = 0;
+	int c;
 
-	while (x < 16)
+	for (c = '0'; c <= '9'; c++)
 	{
-		if (x <= 9)
-		{
-			putchar(x + '0');
-		}
-		else
-		{
-			putchar(x + 87);
-		}
-		++x;
+		putchar(c);
+	}
+	for (c = 'a'; c <= 'f'; c++)
+	{
+		putchar(c);
 	}
 	putchar('\n');
-
 	return (0);
 }

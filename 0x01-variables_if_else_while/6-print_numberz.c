@@ -1,17 +1,18 @@
 #include <stdio.h>
+
 /**
- * main - core function
+ * main - Entry point
  *
- * Return: exit the program
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int i;
+	int c;
 
-	for (i = '0'; i <= '9'; ++i)
-		putchar(i);
-
+	for (c = '0'; c <= '9'; c++)
+	{
+		putchar(c);
+	}
 	putchar('\n');
-
 	return (0);
 }

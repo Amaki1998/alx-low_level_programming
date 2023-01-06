@@ -1,24 +1,23 @@
 #include <stdio.h>
+
 /**
- * main - core function
+ * main - Entry point
  *
- * Return: exit program
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int n = '0';
+	int c;
 
-	while (n <= '9')
+	for (c = '0'; c <= '9'; c++)
 	{
-		putchar(n);
-		if (n != '9')
+		putchar(c);
+		if (c < '9')
 		{
 			putchar(',');
 			putchar(' ');
 		}
-		n++;
 	}
-
 	putchar('\n');
 	return (0);
 }

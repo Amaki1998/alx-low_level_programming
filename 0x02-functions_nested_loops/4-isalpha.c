@@ -1,23 +1,12 @@
-#include "main.h"
+#include "holberton.h"
+
 /**
-* _isalpha - core function whether the character is letter or not
-*
-* @c: variable to check
-*
-* Return: 1 if c is lowercase, 0 otherwise
-*/
+ * _isalpha - checks if character is a letter
+ * @c: the character to test
+ *
+ * Return: 1 if c is a letter, 0 otherwise
+ */
 int _isalpha(int c)
 {
-if (c >= 97 && c <= 122)
-{
-return (1);
-}
-else if (c >= 65 && c <= 90)
-{
-return (1);
-}
-else
-{
-return (0);
-}
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }

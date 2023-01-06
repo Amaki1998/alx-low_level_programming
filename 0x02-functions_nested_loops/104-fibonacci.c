@@ -1,42 +1,47 @@
+#include "holberton.h"
 #include <stdio.h>
+
 /**
- * main - main function
+ * main - calls fibonacci
  *
- * Return: exit program
+ * Return: always 0
  */
 int main(void)
 {
-	unsigned long int a, b, c, x, y, z, i;
+	fibonacci_print_98();
+	return (0);
+}
 
-	b = 1;
-	c = 2;
+/**
+ * fibonacci_print_98 - print first 98 fibonacci numbers
+ *
+ * Return: void
+ */
+void fibonacci_print_98(void)
+{
+	unsigned long i, a1, a2, b1, b2, c1, c2, m, r;
 
-	printf("%lu", b);
-	a = 1;
-	while (a < 91)
-
+	m = 1000000000000000000;
+	a1 = 0;
+	a2 = 1;
+	b1 = 0;
+	b2 = 2;
+	for (i = 0; i < 98; i++)
 	{
-		printf(", %lu", c);
-		c = c + b;
-		b = c - b;
-		a++;
+		if (a1)
+			printf("%lu", a1);
+		printf("%lu", a2);
+		if (i < 97)
+			printf(", ");
+		c1 = a1;
+		c2 = a2;
+		a1 = b1;
+		a2 = b2;
+		b1 += c1;
+		b2 += c2;
+		r = b2 / m;
+		b2 %= m;
+		b1 += r;
 	}
-	x = b / 1000000000;
-	y = b % 1000000000;
-	z = c / 1000000000;
-	i = c % 1000000000;
-	a = 92;
-	while (a < 99)
-	{
-		printf(", %lu", z + (i / 1000000000));
-		printf("%lu", i % 1000000000);
-		z = z + x;
-		x = z - x;
-		i = i + y;
-		y = i - y;
-		a++;
-	}
-putchar('\n');
-
-return (0);
+	printf("\n");
 }
